@@ -1,0 +1,19 @@
+<%- include('./partials/header.ejs') %>
+
+    <h1>Show</h1>
+    <hr>
+    <h1><%=movies.name%></h1>
+    <img src="<%=movies.img%>" alt="Movie" height="600px" width="auto">
+    <p><%=movies.description%></p>
+    <p>Likes: <%=movies.likes%></p>
+    <p>Dislikes: <%=movies.dislikes%></p>
+    <p>Number of Reviews: <%=movies.numberOfReviews%></p>
+    <a href="/movies/new"><button type="button" name="button">Create a New Movie</button></a>
+    <hr>
+    <br>
+    <a href="/movies"><button type="button" name="button">Movies</button></a>
+    <a href="/movies/reviews"><button type="button" name="button">Reviews</button></a>
+    <a href="/movies/watch"><button type="button" name="button">What to Watch</button></a>
+
+
+<%- include('./partials/footer.ejs') %>

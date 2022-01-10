@@ -1,0 +1,34 @@
+<%- include('./partials/header.ejs') %>
+
+    <h1>Index</h1>
+    <a href="/movies"><button type="button" name="button">Movies</button></a>
+    <a href="/movies/review"><button type="button" name="button">Reviews</button></a>
+    <a href="/movies/watch"><button type="button" name="button">What to Watch</button></a>
+    <a href="/movies/new"><button type="button" name="button">Add New Movie</button></a>
+    <hr>
+
+    <% for (var i = 0; i < movies.length; i++) { %>
+          <h3><%=movies[i].name%></h3>
+          <a href="/movies/<%= movies[i]._id%>"><img src="<%=movies[i].img%>" alt="<%=movies[i].name%> Image" height="300px" width="auto"></a>
+          <p><%=movies[i].description%></p>
+          <p>Likes: <%=movies[i].likes%></p>
+          <p>Dislikes: <%=movies[i].dislikes%></p>
+          <p>Number of Reviews: <%=movies[i].numberOfReviews%></p>
+
+          <a href="/movies/<%=movies[i]._id%>/edit"><button type="button" name="button">Edit Movie</button></a>
+          <br>
+          <br>
+          <form action="/movies/<%=movies[i]._id%>?_method=DELETE" method="POST">
+          <input type="submit" value="Delete">
+        </form>
+          <hr>
+    <% } %>
+
+
+    <br>
+    <a href="/movies"><button type="button" name="button">Movies</button></a>
+    <a href="/movies/reviews"><button type="button" name="button">Reviews</button></a>
+    <a href="/movies/watch"><button type="button" name="button">What to Watch</button></a>
+
+
+<%- include('./partials/footer.ejs') %>
