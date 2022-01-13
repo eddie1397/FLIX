@@ -1,12 +1,21 @@
 <%- include('./partials/header.ejs') %>
 
-    <h1>Homepage</h1>
-    
-    <hr>
-    <br>
-    <a href="/movies"><button type="button" name="button">Movies</button></a>
-    <a href="/movies/reviews"><button type="button" name="button">Reviews</button></a>
-    <a href="/movies/watch"><button type="button" name="button">What to Watch</button></a>
 
+    <h1 class='container white-text' id="main-title">FLIX</h1>
+    <p class="container white-text" id="main-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Mattis ullamcorper
+      velit sed ullamcorper. Mi quis hendrerit dolor magna eget est lorem ipsum.
+      Sit amet dictum sit amet justo donec. Duis ultricies lacus sed turpis tincidunt id. </p>
+      <div class="container">
+
+          <a href="/movies" class="btn red white-text" id='main-movie-btn'>
+            <i class='material-icons'>theaters</i>
+          </a>
+
+          <a href="/movies/review" class="btn red white-text" id='main-review-btn'>
+            <i class='material-icons'>reviews</i>
+          </a>
+
+    </div>
 
 <%- include('./partials/footer.ejs') %>

@@ -1,24 +1,38 @@
 <%- include('./partials/header.ejs') %>
+<div class="contain">
 
-    <h1>Index</h1>
 
+<div class="row">
 
     <% for (var i = 0; i < movies.length; i++) { %>
-          <h3><%=movies[i].name%></h3>
-          <a href="/movies/<%= movies[i]._id%>"><img src="<%=movies[i].img%>" alt="<%=movies[i].name%> Image" height="300px" width="auto"></a>
-          <p><%=movies[i].description%></p>
-          <p>Likes: <%=movies[i].likes%></p>
-          <p>Dislikes: <%=movies[i].dislikes%></p>
-          <p>Number of Reviews: <%=movies[i].numberOfReviews%></p>
 
-          <a href="/movies/<%=movies[i]._id%>/edit"><button type="button" name="button">Edit Movie</button></a>
-          <br>
-          <br>
-          <form action="/movies/<%=movies[i]._id%>?_method=DELETE" method="POST">
-          <input type="submit" value="Delete">
-        </form>
-        
+      <div class="col s6 m3 l3">
+                <div class="card  indigo darken-5 center">
+                  <div class="card-image">
+                    <img src="<%=movies[i].img%>" alt="">
+                    <a href="#" class="btn-floating pink lighten-4 pulse halfway-fab">
+                      <i class="material-icons">favorite</i>
+                    </a>
+                  </div>
+                  <span class="card-title white-text">
+                    <%=movies[i].name%>
+                  </span>
+                  <div class="card-content white-text ">
+                    <p><%=movies[i].description%></p>
+                  </div>
+                  <div class="card-action ">
+                    <a href="/movies/<%=movies[i]._id%>" class="white-text">More Details</a>
+                    <a href="/movies/<%=movies[i]._id%>/edit" class="white-text">Edit</a>
+                    <form action="/movies/<%=movies[i]._id%>?_method=DELETE" method="POST">
+                      <br>
+                    <input class="btn red lighten-1" type="submit" value="Delete" >
+                    <br>
+                  </form>
+                  </div>
+                </div>
+            </div>
     <% } %>
+  </div>
 
-
+</div>
 <%- include('./partials/footer.ejs') %>

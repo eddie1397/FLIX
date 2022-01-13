@@ -1,19 +1,46 @@
 <%- include('./partials/header.ejs') %>
+<div class="container">
 
-    <h1>Show</h1>
-    <hr>
-    <h1><%=movies.name%></h1>
-    <img src="<%=movies.img%>" alt="Movie" height="600px" width="auto">
+
+<div class="card indigo darken-5 center">
+  <div class="card-image">
+    <img src="<%=movies.img%>" alt="">
+    <a href="#" class="btn-floating pink lighten-4 pulse halfway-fab">
+      <i class="material-icons">favorite</i>
+    </a>
+  </div>
+  <span class="card-title white-text">
+    <%=movies.name%>
+  </span>
+  <div class="card-content white-text ">
     <p><%=movies.description%></p>
+  </div>
+
+  <div class="card-content white-text ">
     <p>Likes: <%=movies.likes%></p>
+  </div>
+
+  <div class="card-content white-text">
     <p>Dislikes: <%=movies.dislikes%></p>
+  </div>
+
+  <div class="card-content white-text ">
     <p>Number of Reviews: <%=movies.numberOfReviews%></p>
-    <a href="/movies/new"><button type="button" name="button">Create a New Movie</button></a>
-    <hr>
+  </div>
+
+
+  <div class="card-action ">
+    <a href="/movies/<%=movies._id%>" class="white-text">More Details</a>
+    <a href="/movies/<%=movies._id%>/edit" class="white-text">Edit</a>
+    <form action="/movies/<%=movies._id%>?_method=DELETE" method="POST">
+      <br>
+    <input class="btn red lighten-1" type="submit" value="Delete" >
     <br>
-    <a href="/movies"><button type="button" name="button">Movies</button></a>
-    <a href="/movies/reviews"><button type="button" name="button">Reviews</button></a>
-    <a href="/movies/watch"><button type="button" name="button">What to Watch</button></a>
+  </form>
+  </div>
+</div>
+
+</div>
 
 
 <%- include('./partials/footer.ejs') %>

@@ -1,7 +1,8 @@
 /////////////////////////////////// Express Setup ////////////////////////////////////
 const express = require('express');
 const app = express();
-const PORT = 3000;
+require('dotenv').config();
+const PORT = process.env.PORT;
 const methodOverride = require('method-override');
 const Movie = require('./models/movies');
 
@@ -32,7 +33,7 @@ const mongoose = require('mongoose');
 
 // basiccrud is the name of the database that we will use/create
 
-const mongoURI = 'mongodb://127.0.0.1:27017/movies';
+const mongoURI = process.env.MONGODB_URI;
 const db = mongoose.connection;
 
 mongoose.connect(mongoURI, {
@@ -63,7 +64,7 @@ app.use('/movies', moviesController)
 
 /////////////////////////////////// APP LISTEN /////////////////////////////////
 
-app.listen(3000, (req,res)=> {
+app.listen(PORT, (req,res)=> {
   console.log('Running for ya! 🏃🏽‍♂️🏃🏽‍♂️🏃🏽‍♂️');
 });
 

@@ -1,3 +1,56 @@
 body {
-  background-color: lavender;
+  background-color: ghostWhite;
+  position: absolute;
+  background-image: url(https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTgwOTN8MHwxfHNlYXJjaHw3fHxtb3ZpZXN8ZW58MHx8fHwxNjQyMDkyNTc3&ixlib=rb-1.2.1&q=80&w=1080);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  display: block;
+
+}
+
+
+nav .badge {
+        position: relative;
+        top: 20px;
+        right: 20px;
+        border-radius: 10px;
+
+      }
+
+
+#main-title{
+  position: relative;
+  top: 200px;
+
+}
+
+#main-paragraph{
+  position: relative;
+  top: 220px;
+  /* width: 500px; */
+  /* right: 160px; */
+
+
+}
+
+.contain{
+  margin: 100px;
+
+}
+
+#main-movie-btn{
+  top: 230px;
+  position: relative;
+
+
+}
+
+#main-review-btn{
+  top: 230px;
+  left: 10px;
+  position: relative;
+
+
 }
