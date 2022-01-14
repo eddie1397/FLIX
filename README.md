@@ -20,6 +20,6 @@ Feel free to add as many movies as you would like.
 HTML, CSS, JavaScript, MongoDB, Express, Mongoose, NodeJS
 
 
-## Access Game Here:
+## Access App Here:
 
-https://eddie1397.github.io/littleAlchemy/
+https://flix-movie-1.herokuapp.com/movies
