@@ -47,7 +47,7 @@ As a user, I would like to view my list of movies. I would also like to be able 
 
 ## Access App Here:
 
-https://flix-movie-1.herokuapp.com/home
+https://flix-movie-1.herokuapp.com/movies/home
 
 
 
